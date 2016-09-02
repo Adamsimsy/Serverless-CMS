@@ -1,12 +1,8 @@
 using System.Net;
-using System.Threading.Tasks;
-using Microsoft.Azure;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Blob;
 
 public static void Run(HttpRequestMessage req, out string outputBlob, TraceWriter log)
 {
-    var helloRequest = await req.Content.ReadAsAsync<HelloRequest>();
+    var helloRequest = req.Content.ReadAsAsync<HelloRequest>();
     
     var personToGreet = helloRequest?.Name ?? "world";    
     var responseMessage = $"Hello {personToGreet}!";
