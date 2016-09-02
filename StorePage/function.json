@@ -7,7 +7,7 @@
     },
 	{
       "name": "outputBlob",
-      "type": "blob",
+      "type": "application/xhtml+xml",
       "path": "pages/index.html",
       "direction": "out"
     }
