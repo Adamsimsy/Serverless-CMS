@@ -7,9 +7,10 @@
     },
 	{
       "name": "outputBlob",
-      "type": "application/xhtml+xml",
+      "type": "blob",
       "path": "pages/index.html",
-      "direction": "out"
+      "direction": "out",
+	  "mime-type" : "application/xhtml+xml"
     }
   ]
 }
