@@ -4,7 +4,7 @@ using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
-public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, out string outputBlob, TraceWriter log)
+public static void Run(HttpRequestMessage req, out string outputBlob, TraceWriter log)
 {
     var helloRequest = await req.Content.ReadAsAsync<HelloRequest>();
     
