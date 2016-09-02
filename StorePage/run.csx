@@ -1,5 +1,8 @@
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.Azure;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, out string outputBlob, TraceWriter log)
 {
