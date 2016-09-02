@@ -1,0 +1,15 @@
+{
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+	{
+      "name": "outputBlob",
+      "type": "blob",
+      "path": "index.html",
+      "direction": "out"
+    }
+  ]
+}
