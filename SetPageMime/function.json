@@ -1,0 +1,16 @@
+{
+  "bindings": [
+	{
+      "name": "inBlob",
+      "type": "blobTrigger",
+      "path": "pages/index.html",
+      "direction": "in"
+    },
+	{
+      "name": "outputBlob",
+      "type": "blob",
+      "path": "pages/index.html",
+      "direction": "out"
+    }
+  ]
+}
