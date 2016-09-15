@@ -11,7 +11,7 @@ public static async Task<HttpResponseMessage> run(HttpRequestMessage req, CloudB
     dynamic data = await req.Content.ReadAsAsync<object>();
 
 	string path = data?.path;
-	string html = data?.name;
+	string html = data?.html;
 
     var blob = container.GetBlockBlobReference(path);
     
