@@ -5,8 +5,6 @@ using Microsoft.WindowsAzure.Storage.Blob;
 
 public static async Task<HttpResponseMessage> run(HttpRequestMessage req, CloudBlobContainer container, TraceWriter log)
 {
-	//submit { 'path' : 'pages/test6.html', 'html' : '<!DOCTYPE html><html lang=""en""><head><meta charset=""utf-8""><title>Hello World</title></head><body><h1>Hello World</h1><p>" + name + " was here.</p></body></html>' }
-
     // Get request body
     dynamic data = await req.Content.ReadAsAsync<object>();
 
