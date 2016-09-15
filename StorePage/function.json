@@ -1,15 +1,16 @@
 {
   "bindings": [
     {
-      "name": "req",
-      "type": "httpTrigger",
+      "type": "manualTrigger",
+      "name": "input",
       "direction": "in"
     },
-	{
-      "name": "outputBlob",
-      "type": "blob",
-      "path": "pages/index.html",
-      "direction": "out"
+    {
+        "name": "container",
+        "type": "blob",
+        "path": "pages",
+        "direction": "in"
     }
-  ]
+  ],
+  "disabled": false
 }
