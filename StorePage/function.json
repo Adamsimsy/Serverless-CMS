@@ -5,8 +5,7 @@
       "name": "req",
       "type": "httpTrigger",
       "direction": "in"
-    },
-    {
+    },{
         "name": "container",
         "type": "blob",
         "path": "pages",
