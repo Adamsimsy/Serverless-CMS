@@ -2,11 +2,20 @@ using System;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
-public static void Run(string input, CloudBlobContainer container, TraceWriter log)
+public static async Task<HttpResponseMessage> run(HttpRequestMessage req, CloudBlobContainer container, TraceWriter log)
 {
-    log.Info(input);
+	// parse query parameter
+    string name = req.GetQueryNameValuePairs()
+        .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
+        .Value;
+
+    // Get request body
+    dynamic data = await req.Content.ReadAsAsync<object>();
+
+    // Set name to query string or body data
+    name = name ?? data?.name;
     
-    var htmlText = @"<!DOCTYPE html><html lang=""en""><head><meta charset=""utf-8""><title>Hello World</title></head><body><h1>Hello World</h1><p>Adam was here.</p></body></html>";
+    var htmlText = @"<!DOCTYPE html><html lang=""en""><head><meta charset=""utf-8""><title>Hello World</title></head><body><h1>Hello World</h1><p>" + name + " was here.</p></body></html>";
     
     var blob = container.GetBlockBlobReference("pages/test6.html");
     

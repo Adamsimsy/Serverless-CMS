@@ -1,8 +1,9 @@
 {
   "bindings": [
     {
-      "type": "manualTrigger",
-      "name": "input",
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
       "direction": "in"
     },
     {
