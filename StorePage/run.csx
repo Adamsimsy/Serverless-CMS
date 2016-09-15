@@ -30,5 +30,5 @@ public static async Task<HttpResponseMessage> run(HttpRequestMessage req, CloudB
     blob.Properties.ContentType = "text/html";
     blob.SetProperties();
 	
-	return "true";
+	return req.CreateResponse(HttpStatusCode.OK, "OK");
 }
